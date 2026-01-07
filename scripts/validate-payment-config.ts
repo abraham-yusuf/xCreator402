@@ -1,6 +1,6 @@
 /**
  * Payment Configuration Validation Script
- * 
+ *
  * This script validates that the payment configuration is correctly set up
  * for both EVM (Base) and Solana networks.
  */
@@ -17,6 +17,9 @@ interface ValidationResult {
 
 /**
  * Validates EVM address format
+ *
+ * @param address - The EVM address to validate
+ * @returns Validation result with errors and warnings
  */
 function validateEvmAddress(address: string | undefined): ValidationResult {
   const result: ValidationResult = { valid: true, errors: [], warnings: [] };
@@ -50,6 +53,9 @@ function validateEvmAddress(address: string | undefined): ValidationResult {
 
 /**
  * Validates Solana address format
+ *
+ * @param address - The Solana address to validate
+ * @returns Validation result with errors and warnings
  */
 function validateSvmAddress(address: string | undefined): ValidationResult {
   const result: ValidationResult = { valid: true, errors: [], warnings: [] };
@@ -77,6 +83,9 @@ function validateSvmAddress(address: string | undefined): ValidationResult {
 
 /**
  * Validates facilitator URL
+ *
+ * @param url - The facilitator URL to validate
+ * @returns Validation result with errors and warnings
  */
 function validateFacilitatorUrl(url: string | undefined): ValidationResult {
   const result: ValidationResult = { valid: true, errors: [], warnings: [] };
@@ -95,7 +104,9 @@ function validateFacilitatorUrl(url: string | undefined): ValidationResult {
     }
   } catch (error) {
     result.valid = false;
-    result.errors.push(`Invalid URL format: ${error instanceof Error ? error.message : String(error)}`);
+    result.errors.push(
+      `Invalid URL format: ${error instanceof Error ? error.message : String(error)}`,
+    );
   }
 
   return result;

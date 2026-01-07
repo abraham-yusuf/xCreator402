@@ -1,6 +1,6 @@
 /**
  * Facilitator Connectivity Test
- * 
+ *
  * This script tests connectivity to the configured facilitator
  * and validates that it can handle payment requests.
  */
@@ -20,10 +20,12 @@ interface FacilitatorStatus {
 
 /**
  * Tests connectivity to the facilitator
+ *
+ * @returns Promise resolving to facilitator status information
  */
 async function testFacilitatorConnectivity(): Promise<FacilitatorStatus> {
   const facilitatorUrl = process.env.FACILITATOR_URL;
-  
+
   if (!facilitatorUrl) {
     return {
       reachable: false,
@@ -32,10 +34,10 @@ async function testFacilitatorConnectivity(): Promise<FacilitatorStatus> {
   }
 
   console.log(`📡 Testing connectivity to facilitator: ${facilitatorUrl}`);
-  
+
   try {
     const startTime = Date.now();
-    
+
     // Test basic HTTP connectivity
     const response = await fetch(facilitatorUrl, {
       method: "GET",
@@ -68,10 +70,12 @@ async function testFacilitatorConnectivity(): Promise<FacilitatorStatus> {
 
 /**
  * Validates that the x402 server is properly configured
+ *
+ * @returns True if server is properly configured, false otherwise
  */
 function validateServerConfiguration(): boolean {
   console.log("🔧 Validating x402 server configuration...");
-  
+
   try {
     // Check if server is instantiated
     if (!server) {
@@ -82,7 +86,9 @@ function validateServerConfiguration(): boolean {
     console.log("   ✅ x402 server is initialized");
     return true;
   } catch (error) {
-    console.log(`   ❌ Server validation failed: ${error instanceof Error ? error.message : String(error)}`);
+    console.log(
+      `   ❌ Server validation failed: ${error instanceof Error ? error.message : String(error)}`,
+    );
     return false;
   }
 }
@@ -106,7 +112,7 @@ async function testPaymentInfrastructure() {
   // Test 2: Facilitator Connectivity
   console.log("Test 2: Facilitator Connectivity");
   const facilitatorStatus = await testFacilitatorConnectivity();
-  
+
   if (facilitatorStatus.reachable) {
     console.log(`   ✅ Facilitator is reachable`);
     console.log(`   ⏱️  Response time: ${facilitatorStatus.responseTime}ms`);
@@ -144,13 +150,13 @@ async function testPaymentInfrastructure() {
     console.log("3. Use both EVM (Base) and Solana networks for testing");
   } else {
     console.log("❌ Payment infrastructure has issues that need to be resolved.");
-    
+
     if (missingVars.length > 0) {
       console.log("\nMissing environment variables:");
       missingVars.forEach(v => console.log(`   - ${v}`));
       console.log("\nPlease update your .env file with the required values.");
     }
-    
+
     if (!facilitatorStatus.reachable) {
       console.log("\nFacilitator connectivity issues:");
       console.log(`   - ${facilitatorStatus.error}`);
@@ -159,7 +165,7 @@ async function testPaymentInfrastructure() {
       console.log("   2. The facilitator service is running");
       console.log("   3. Network connectivity is available");
     }
-    
+
     process.exit(1);
   }
 }
