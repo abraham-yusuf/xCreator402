@@ -49,13 +49,13 @@ export const routeConfigurations = {
       {
         scheme: "exact",
         price: "$0.001",
-        network: "eip155:84532", // base-sepolia
+        network: "eip155:84532" as const, // base-sepolia
         payTo: evmAddress,
       },
       {
         scheme: "exact",
         price: "$0.001",
-        network: "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1", // solana devnet
+        network: "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1" as const, // solana devnet
         payTo: svmAddress,
       },
     ],
@@ -70,13 +70,13 @@ export const routeConfigurations = {
       {
         scheme: "exact",
         price: "$0.01",
-        network: "eip155:84532",
+        network: "eip155:84532" as const,
         payTo: evmAddress,
       },
       {
         scheme: "exact",
         price: "$0.01",
-        network: "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1",
+        network: "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1" as const,
         payTo: svmAddress,
       },
     ],
@@ -91,13 +91,13 @@ export const routeConfigurations = {
       {
         scheme: "exact",
         price: "$0.02",
-        network: "eip155:84532",
+        network: "eip155:84532" as const,
         payTo: evmAddress,
       },
       {
         scheme: "exact",
         price: "$0.02",
-        network: "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1",
+        network: "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1" as const,
         payTo: svmAddress,
       },
     ],
@@ -112,13 +112,13 @@ export const routeConfigurations = {
       {
         scheme: "exact",
         price: "$0.015",
-        network: "eip155:84532",
+        network: "eip155:84532" as const,
         payTo: evmAddress,
       },
       {
         scheme: "exact",
         price: "$0.015",
-        network: "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1",
+        network: "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1" as const,
         payTo: svmAddress,
       },
     ],
@@ -133,13 +133,13 @@ export const routeConfigurations = {
       {
         scheme: "exact",
         price: "$0.02",
-        network: "eip155:84532",
+        network: "eip155:84532" as const,
         payTo: evmAddress,
       },
       {
         scheme: "exact",
         price: "$0.02",
-        network: "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1",
+        network: "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1" as const,
         payTo: svmAddress,
       },
     ],
@@ -154,13 +154,13 @@ export const routeConfigurations = {
       {
         scheme: "exact",
         price: "$0.05",
-        network: "eip155:84532",
+        network: "eip155:84532" as const,
         payTo: evmAddress,
       },
       {
         scheme: "exact",
         price: "$0.05",
-        network: "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1",
+        network: "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1" as const,
         payTo: svmAddress,
       },
     ],
