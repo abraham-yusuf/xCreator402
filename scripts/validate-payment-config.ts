@@ -5,7 +5,13 @@
  * for both EVM (Base) and Solana networks.
  */
 
-import { evmAddress, svmAddress } from "../proxy";
+// Load environment variables from .env file
+import { config } from "dotenv";
+config();
+
+// Load environment variables from .env file
+import { config } from "dotenv";
+config();
 
 interface ValidationResult {
   valid: boolean;
@@ -107,6 +113,11 @@ async function validatePaymentConfiguration() {
 
   let allValid = true;
 
+  // Get addresses from environment
+  const evmAddress = process.env.EVM_ADDRESS;
+  const svmAddress = process.env.SVM_ADDRESS;
+  const facilitatorUrl = process.env.FACILITATOR_URL;
+
   // Validate EVM Address
   console.log("1️⃣  Validating EVM (Base) Network Configuration");
   const evmResult = validateEvmAddress(evmAddress);
@@ -135,7 +146,6 @@ async function validatePaymentConfiguration() {
 
   // Validate Facilitator URL
   console.log("3️⃣  Validating Facilitator Configuration");
-  const facilitatorUrl = process.env.FACILITATOR_URL;
   const facilitatorResult = validateFacilitatorUrl(facilitatorUrl);
   if (facilitatorResult.valid) {
     console.log("   ✅ Facilitator URL is valid:", facilitatorUrl);

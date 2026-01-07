@@ -20,10 +20,10 @@
     "@heroicons/react": "^2.2.0",
     "@x402/core": "latest",
     "@x402/evm": "latest",
-    "@x402/svm": "latest",
+    "@x402/extensions": "latest",
     "@x402/next": "latest",
     "@x402/paywall": "latest",
-    "@x402/extensions": "latest",
+    "@x402/svm": "latest",
     "next": "^16.0.10",
     "react": "^19.2.3",
     "react-dom": "^19.2.3"
@@ -36,6 +36,7 @@
     "@types/react-dom": "^19",
     "@typescript-eslint/eslint-plugin": "^8.29.1",
     "@typescript-eslint/parser": "^8.29.1",
+    "dotenv": "^17.2.3",
     "eslint": "^9.24.0",
     "eslint-config-next": "16.0.6",
     "eslint-plugin-import": "^2.31.0",
@@ -43,7 +44,7 @@
     "eslint-plugin-prettier": "^5.2.6",
     "prettier": "3.5.2",
     "tailwindcss": "^4.0.0",
-    "tsx": "^4.19.2",
+    "tsx": "^4.21.0",
     "typescript": "^5"
   }
 }

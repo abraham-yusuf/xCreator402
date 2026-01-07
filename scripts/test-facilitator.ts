@@ -5,7 +5,12 @@
  * and validates that it can handle payment requests.
  */
 
-import { server } from "../proxy";
+// Load environment variables FIRST before any imports
+import { config as loadEnv } from "dotenv";
+loadEnv();
+
+// Now import from proxy
+const { server } = await import("../proxy.js");
 
 interface FacilitatorStatus {
   reachable: boolean;

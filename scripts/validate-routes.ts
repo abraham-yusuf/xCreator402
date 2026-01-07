@@ -5,7 +5,12 @@
  * configurations for both EVM (Base) and Solana networks.
  */
 
-import { proxy, config } from "../proxy";
+// Load environment variables FIRST before any imports
+import { config as loadEnv } from "dotenv";
+loadEnv();
+
+// Now import from proxy
+const { routeConfigurations, config } = await import("../proxy.js");
 
 interface RouteConfig {
   path: string;
@@ -21,8 +26,6 @@ interface RouteConfig {
 function validateRouteConfiguration() {
   console.log("🔍 Validating Protected Route Configurations...\n");
 
-  // Get all configured routes from proxy
-  const proxyConfig = proxy as any;
   const routes: RouteConfig[] = [];
   
   let allValid = true;
@@ -35,7 +38,7 @@ function validateRouteConfiguration() {
     console.log(`🔐 Route: ${routePath}`);
     
     // Check if route has payment configuration
-    const routeConfig = (proxy as any)[routePath];
+    const routeConfig = routeConfigurations[routePath];
     
     if (!routeConfig) {
       console.log(`   ❌ No payment configuration found for this route`);

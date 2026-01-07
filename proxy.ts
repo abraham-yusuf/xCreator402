@@ -42,9 +42,8 @@ export const paywall = createPaywall()
   })
   .build();
 
-// Build proxy
-export const proxy = paymentProxy(
-  {
+// Define route configurations for export and validation
+export const routeConfigurations = {
     "/protected": {
       accepts: [
         {
@@ -171,7 +170,11 @@ export const proxy = paymentProxy(
         ...declareDiscoveryExtension({}),
       },
     },
-  },
+};
+
+// Build proxy
+export const proxy = paymentProxy(
+  routeConfigurations,
   server,
   undefined, // paywallConfig (using custom paywall instead)
   paywall, // custom paywall provider
