@@ -9,10 +9,6 @@
 import { config } from "dotenv";
 config();
 
-// Load environment variables from .env file
-import { config } from "dotenv";
-config();
-
 interface ValidationResult {
   valid: boolean;
   errors: string[];
@@ -158,7 +154,8 @@ async function validatePaymentConfiguration() {
   console.log();
 
   // Summary
-  console.log("=" .repeat(60));
+  const SEPARATOR_LENGTH = 60;
+  console.log("=".repeat(SEPARATOR_LENGTH));
   if (allValid) {
     console.log("✅ All payment configurations are valid!");
     console.log("\nNext steps:");

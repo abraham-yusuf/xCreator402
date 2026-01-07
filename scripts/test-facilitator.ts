@@ -134,7 +134,8 @@ async function testPaymentInfrastructure() {
   console.log();
 
   // Summary
-  console.log("=" .repeat(60));
+  const SEPARATOR_LENGTH = 60;
+  console.log("=".repeat(SEPARATOR_LENGTH));
   if (allPassed) {
     console.log("✅ Payment infrastructure is ready!");
     console.log("\nYou can now:");

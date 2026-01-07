@@ -89,7 +89,8 @@ function validateRouteConfiguration() {
   });
 
   // Summary
-  console.log("=" .repeat(60));
+  const SEPARATOR_LENGTH = 60;
+  console.log("=".repeat(SEPARATOR_LENGTH));
   console.log(`📊 Summary:`);
   console.log(`   Total protected routes: ${routes.length}`);
   console.log(`   Routes with EVM support: ${routes.filter(r => r.hasEvm).length}`);
