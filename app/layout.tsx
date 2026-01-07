@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "x402 Next.js Demo",
-  description: "A chain-agnostic protocol for web payments",
+  title: "xCreator402 - Web3 Creator Platform",
+  description: "Monetize your content with X402 Protocol - Pay-per-view articles, podcasts, and videos on Base and Solana",
 };
 
 export default function RootLayout({
