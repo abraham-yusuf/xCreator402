@@ -10,7 +10,11 @@
     "format": "prettier -c .prettierrc --write \"**/*.{ts,js,cjs,json,md}\"",
     "format:check": "prettier -c .prettierrc --check \"**/*.{ts,js,cjs,json,md}\"",
     "lint": "eslint . --ext .ts --fix",
-    "lint:check": "eslint . --ext .ts"
+    "lint:check": "eslint . --ext .ts",
+    "validate:config": "tsx scripts/validate-payment-config.ts",
+    "validate:routes": "tsx scripts/validate-routes.ts",
+    "validate:facilitator": "tsx scripts/test-facilitator.ts",
+    "validate:all": "npm run validate:config && npm run validate:routes && npm run validate:facilitator"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
@@ -39,6 +43,7 @@
     "eslint-plugin-prettier": "^5.2.6",
     "prettier": "3.5.2",
     "tailwindcss": "^4.0.0",
+    "tsx": "^4.19.2",
     "typescript": "^5"
   }
 }
