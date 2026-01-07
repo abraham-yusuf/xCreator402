@@ -66,6 +66,111 @@ export const proxy = paymentProxy(
         ...declareDiscoveryExtension({}),
       },
     },
+    "/articles/web3-future": {
+      accepts: [
+        {
+          scheme: "exact",
+          price: "$0.01",
+          network: "eip155:84532",
+          payTo: evmAddress,
+        },
+        {
+          scheme: "exact",
+          price: "$0.01",
+          network: "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1",
+          payTo: svmAddress,
+        },
+      ],
+      description: "Premium Article: The Future of Web3 Payments",
+      mimeType: "text/html",
+      extensions: {
+        ...declareDiscoveryExtension({}),
+      },
+    },
+    "/articles/creator-economy": {
+      accepts: [
+        {
+          scheme: "exact",
+          price: "$0.02",
+          network: "eip155:84532",
+          payTo: evmAddress,
+        },
+        {
+          scheme: "exact",
+          price: "$0.02",
+          network: "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1",
+          payTo: svmAddress,
+        },
+      ],
+      description: "Premium Article: Building in the Creator Economy",
+      mimeType: "text/html",
+      extensions: {
+        ...declareDiscoveryExtension({}),
+      },
+    },
+    "/articles/decentralized-content": {
+      accepts: [
+        {
+          scheme: "exact",
+          price: "$0.015",
+          network: "eip155:84532",
+          payTo: evmAddress,
+        },
+        {
+          scheme: "exact",
+          price: "$0.015",
+          network: "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1",
+          payTo: svmAddress,
+        },
+      ],
+      description: "Premium Article: Decentralized Content Distribution",
+      mimeType: "text/html",
+      extensions: {
+        ...declareDiscoveryExtension({}),
+      },
+    },
+    "/podcasts/web3-insights": {
+      accepts: [
+        {
+          scheme: "exact",
+          price: "$0.02",
+          network: "eip155:84532",
+          payTo: evmAddress,
+        },
+        {
+          scheme: "exact",
+          price: "$0.02",
+          network: "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1",
+          payTo: svmAddress,
+        },
+      ],
+      description: "Premium Podcast: Web3 Insights Episode 1",
+      mimeType: "text/html",
+      extensions: {
+        ...declareDiscoveryExtension({}),
+      },
+    },
+    "/videos/blockchain-basics": {
+      accepts: [
+        {
+          scheme: "exact",
+          price: "$0.05",
+          network: "eip155:84532",
+          payTo: evmAddress,
+        },
+        {
+          scheme: "exact",
+          price: "$0.05",
+          network: "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1",
+          payTo: svmAddress,
+        },
+      ],
+      description: "Premium Video: Blockchain Basics - A Complete Guide",
+      mimeType: "text/html",
+      extensions: {
+        ...declareDiscoveryExtension({}),
+      },
+    },
   },
   server,
   undefined, // paywallConfig (using custom paywall instead)
@@ -74,5 +179,12 @@ export const proxy = paymentProxy(
 
 // Configure which paths the proxy should run on
 export const config = {
-  matcher: ["/protected/:path*"],
+  matcher: [
+    "/protected/:path*",
+    "/articles/web3-future/:path*",
+    "/articles/creator-economy/:path*",
+    "/articles/decentralized-content/:path*",
+    "/podcasts/web3-insights/:path*",
+    "/videos/blockchain-basics/:path*",
+  ],
 };
