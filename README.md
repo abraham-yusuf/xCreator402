@@ -28,10 +28,42 @@ and fill required environment variables:
 pnpm install && pnpm build
 ```
 
-3. Run the server:
+3. **Validate your configuration** (recommended):
+```bash
+npm run validate:all
+```
+
+This will check:
+- ✅ EVM and Solana addresses are properly formatted
+- ✅ All protected routes support both payment networks
+- ✅ Facilitator connectivity
+
+See [TESTING.md](./TESTING.md) for detailed testing and validation instructions.
+
+4. Run the server:
 ```bash
 pnpm dev
 ```
+
+## Testing & Validation
+
+The project includes comprehensive testing and validation tools for payment processes:
+
+### Quick Validation
+
+```bash
+# Validate all payment configurations
+npm run validate:all
+
+# Or run individual checks:
+npm run validate:config       # Check addresses and facilitator URL
+npm run validate:routes       # Verify routes support both networks
+npm run validate:facilitator  # Test facilitator connectivity
+```
+
+### Manual Testing
+
+For detailed manual testing procedures, troubleshooting, and network-specific testing instructions, see **[TESTING.md](./TESTING.md)**.
 
 ## Example Routes
 
