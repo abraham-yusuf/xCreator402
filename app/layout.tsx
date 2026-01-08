@@ -4,7 +4,7 @@ import "./globals.css";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Halaman Utama X402 - Decentralized Content Protocol",
+  title: "X402 Home - Decentralized Content Protocol",
   description: "Monetize your content with X402 Protocol - Pay-per-view articles, podcasts, and videos on Base and Solana",
 };
 

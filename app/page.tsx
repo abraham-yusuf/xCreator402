@@ -158,7 +158,7 @@ export default function Home() {
                       <h3 className="text-white text-lg font-bold leading-tight line-clamp-2 mt-1 group-hover:text-primary transition-colors">Web3 Gaming: Beyond the Hype Cycle</h3>
                     </div>
                   </div>
-                  <p className="text-text-muted text-sm line-clamp-2">An deep dive into the tokenomics of next-gen play-to-earn models and sustainable economies.</p>
+                  <p className="text-text-muted text-sm line-clamp-2">A deep dive into the tokenomics of next-gen play-to-earn models and sustainable economies.</p>
                   <div className="mt-auto pt-4 flex items-center justify-between border-t border-white/5">
                     <div className="flex items-center gap-2">
                       <div className="size-6 rounded-full bg-gray-700 bg-cover" style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuDwqUMrnSjymZRHe9gi_Iq4jE6w7O3NMekW_23iqUDoVNIG0nCCBPrSGbtU2xO5KST2SlimX-aGAOV0w6HI5wLkQcna3AFG5En2DrehCXUeVZCDoLQ7m9DOn6XIxs4ldlM0RF-BPQhULqlVTdFYVk1MZjEZyM7GTRct02k6w0R7h7ZHQLnHt1kgSK8QcgeK5v-D9BAHS-qj0jZZqFrZEQw4uKfVnR5pt1tr1t749OJnBjBgABeaaYmQ4_ZAzk4Pn-5-fu6eTNWARUZn")' }}></div>
@@ -222,7 +222,7 @@ export default function Home() {
                       <h3 className="text-white text-lg font-bold leading-tight line-clamp-2 mt-1 group-hover:text-primary transition-colors">Mastering Solidity: Advanced Patterns</h3>
                     </div>
                   </div>
-                  <p className="text-text-muted text-sm line-clamp-2">Learn optimize gas usage and secure your smart contracts against re-entrancy attacks.</p>
+                  <p className="text-text-muted text-sm line-clamp-2">Learn how to optimize gas usage and secure your smart contracts against re-entrancy attacks.</p>
                   <div className="mt-auto pt-4 flex items-center justify-between border-t border-white/5">
                     <div className="flex items-center gap-2">
                       <div className="size-6 rounded-full bg-gray-700 bg-cover" style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuC538cBZ7fh8DMs_hftBlOritIy109OhJO9bduPq1sw0oWn7Vv_rF1-aUKNiGrmn5m_-tkoCfVw9QuSErVBYqBTRAt6pHkRAqrzRlJxP-1DhG4EcyFpwXchgyBklM7eXgIQ8gUeG9tD-R_VqcI6YySmyc8abh3MZ9dLd2dEtRsauQxuRmDBTB1-h32cywa8QSd8n0-xSpgxWxpHI7b6lEqzjpYh2s2NtnvJixQRo04v0MPrTXXpsy_PiTeVC850tkMoqtCtOt5cTrKv")' }}></div>
