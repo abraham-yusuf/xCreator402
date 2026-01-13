@@ -1,6 +1,11 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Home() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
     <div className="relative flex flex-col min-h-screen w-full bg-[#131022] text-white">
       {/* Header */}
@@ -44,12 +49,72 @@ export default function Home() {
                 Connect
               </span>
             </button>
-            <button className="lg:hidden text-white">
-              <span className="material-symbols-outlined">menu</span>
+            <button 
+              className="lg:hidden text-white"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              <span className="material-symbols-outlined">
+                {isMobileMenuOpen ? 'close' : 'menu'}
+              </span>
             </button>
           </div>
         </div>
       </header>
+
+      {/* Mobile Menu Overlay */}
+      {isMobileMenuOpen && (
+        <div className="lg:hidden fixed inset-0 z-40 bg-[#131022]/95 backdrop-blur-md" style={{top: '72px'}}>
+          <nav className="flex flex-col p-6 gap-4">
+            <Link 
+              href="/articles" 
+              className="flex items-center gap-3 text-white text-lg font-medium py-3 px-4 rounded-lg hover:bg-[#292348] transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <span className="material-symbols-outlined text-[#3713ec]">article</span>
+              Articles
+            </Link>
+            <Link 
+              href="/podcasts" 
+              className="flex items-center gap-3 text-white text-lg font-medium py-3 px-4 rounded-lg hover:bg-[#292348] transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <span className="material-symbols-outlined text-[#3713ec]">mic</span>
+              Podcasts
+            </Link>
+            <Link 
+              href="/videos" 
+              className="flex items-center gap-3 text-white text-lg font-medium py-3 px-4 rounded-lg hover:bg-[#292348] transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <span className="material-symbols-outlined text-[#3713ec]">play_circle</span>
+              Videos
+            </Link>
+            <div className="border-t border-white/10 my-2"></div>
+            <a 
+              href="#" 
+              className="flex items-center gap-3 text-gray-200 text-base font-medium py-3 px-4 rounded-lg hover:bg-[#292348] transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Browse
+            </a>
+            <a 
+              href="#" 
+              className="flex items-center gap-3 text-gray-200 text-base font-medium py-3 px-4 rounded-lg hover:bg-[#292348] transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Creators
+            </a>
+            <a 
+              href="#" 
+              className="flex items-center gap-3 text-gray-200 text-base font-medium py-3 px-4 rounded-lg hover:bg-[#292348] transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              My Library
+            </a>
+          </nav>
+        </div>
+      )}
 
       {/* Main Content */}
       <main className="flex-1 flex flex-col items-center w-full">
