@@ -121,9 +121,9 @@ export default function NewPodcast() {
               </p>
             </div>
 
-            <div className="bg-purple-50 border border-purple-200 rounded-lg p-4">
-              <h3 className="font-semibold text-purple-900 mb-2">X402 Integration</h3>
-              <p className="text-sm text-purple-800">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+              <h3 className="font-semibold text-blue-900 mb-2">X402 Integration</h3>
+              <p className="text-sm text-blue-800">
                 Your podcast will be automatically protected with X402 payment middleware.
                 Listeners will need to pay ${formData.price} to access the full content.
               </p>

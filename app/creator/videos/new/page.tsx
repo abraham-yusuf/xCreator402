@@ -121,9 +121,9 @@ export default function NewVideo() {
               </p>
             </div>
 
-            <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-              <h3 className="font-semibold text-red-900 mb-2">X402 Integration</h3>
-              <p className="text-sm text-red-800">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+              <h3 className="font-semibold text-blue-900 mb-2">X402 Integration</h3>
+              <p className="text-sm text-blue-800">
                 Your video will be automatically protected with X402 payment middleware.
                 Viewers will need to pay ${formData.price} to access the full content.
               </p>
