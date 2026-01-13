@@ -30,6 +30,9 @@ export default function Home() {
             <a className="text-gray-200 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Browse</a>
             <a className="text-gray-200 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Creators</a>
             <a className="text-gray-200 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">My Library</a>
+            <Link href="/articles" className="text-gray-200 hover:text-white text-sm font-medium leading-normal transition-colors">Articles</Link>
+            <Link href="/podcasts" className="text-gray-200 hover:text-white text-sm font-medium leading-normal transition-colors">Podcasts</Link>
+            <Link href="/videos" className="text-gray-200 hover:text-white text-sm font-medium leading-normal transition-colors">Videos</Link>
           </div>
           <div className="flex items-center gap-3">
             <button className="md:hidden text-white">
