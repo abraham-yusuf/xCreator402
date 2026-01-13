@@ -170,6 +170,27 @@ export const routeConfigurations = {
       ...declareDiscoveryExtension({}),
     },
   },
+  "/todo": {
+    accepts: [
+      {
+        scheme: "exact",
+        price: "$0.01",
+        network: "eip155:84532" as const,
+        payTo: evmAddress,
+      },
+      {
+        scheme: "exact",
+        price: "$0.01",
+        network: "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1" as const,
+        payTo: svmAddress,
+      },
+    ],
+    description: "Magic To Do App Access",
+    mimeType: "text/html",
+    extensions: {
+      ...declareDiscoveryExtension({}),
+    },
+  },
 };
 
 // Build proxy
@@ -189,5 +210,6 @@ export const config = {
     "/articles/decentralized-content/:path*",
     "/podcasts/web3-insights/:path*",
     "/videos/blockchain-basics/:path*",
+    "/todo/:path*",
   ],
 };

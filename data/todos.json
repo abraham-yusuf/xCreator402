@@ -1,0 +1,11 @@
+{
+  "eip155:84532:0xtestwallet123": [],
+  "eip155:84532:0xotherwallet": [
+    {
+      "id": "1768278638296",
+      "text": "Secret plan",
+      "completed": false,
+      "createdAt": 1768278638296
+    }
+  ]
+}
