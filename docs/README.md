@@ -11,6 +11,10 @@ Welcome to the comprehensive documentation for xCreator402, a decentralized cont
 
 ### For Developers
 
+#### Quick Start
+
+- **[Quick Reference Guide](./QUICK_REFERENCE.md)** - Common commands, code patterns, and quick troubleshooting
+
 #### Core Documentation
 
 1. **[API Reference](./API_REFERENCE.md)**
