@@ -19,8 +19,7 @@ const handler = async (_: NextRequest) => {
         {
           id: 1,
           title: "The Future of Web3 Payments",
-          excerpt:
-            "Exploring the next generation of payment systems in Web3...",
+          excerpt: "Exploring the next generation of payment systems in Web3...",
           url: "/articles/web3-future",
           author: "Tech Writer",
         },
@@ -78,8 +77,7 @@ export const GET = withX402(
               {
                 id: 1,
                 title: "The Future of Web3 Payments",
-                excerpt:
-                  "Exploring the next generation of payment systems in Web3...",
+                excerpt: "Exploring the next generation of payment systems in Web3...",
                 url: "/articles/web3-future",
                 author: "Tech Writer",
               },
