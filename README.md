@@ -2,6 +2,17 @@
 
 Next.js application demonstrating how to protect routes with a paywall using the `@x402/next` middleware.
 
+## 📚 Documentation
+
+Comprehensive documentation is available in the `/docs` directory:
+
+- **[Documentation Index](./docs/README.md)** - Complete documentation guide and navigation
+- **[API Reference](./docs/API_REFERENCE.md)** - Public API endpoints documentation
+- **[Core Functions](./docs/CORE_FUNCTIONS.md)** - Functions, utilities, and configuration reference
+- **[Component Documentation](./docs/COMPONENTS.md)** - React components and pages reference
+- **[Usage Guide](./docs/USAGE_GUIDE.md)** - Step-by-step integration and usage instructions
+- **[Testing Guide](./TESTING.md)** - Manual and automated testing procedures
+
 ## Prerequisites
 
 - Node.js v20+ (install via [nvm](https://github.com/nvm-sh/nvm))
